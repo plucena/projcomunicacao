@@ -84,15 +84,17 @@ class disciplina {
 
 	}
 
-	function editaDisciplinaByID($pdo,$iddisciplina,$semestre,$curso,$turno,$credito){
+	function editaDisciplinaByID($pdo,$iddisciplina,$nome,$semestre,$curso,$turno,$credito){
 		$conn = $pdo->prepare("UPDATE itemdisciplina
 			SET curso = :curso,
+			nome = :nome,
 			turno = :turno,
 			semestre = :semestre,
 			credito = :credito
 			WHERE iditemdisciplina=:id");
 
 			$conn->bindParam(":curso",$curso,PDO::PARAM_STR);
+			$conn->bindParam(":nome",$nome,PDO::PARAM_STR);
 			$conn->bindParam(":turno",$turno,PDO::PARAM_STR);
 			$conn->bindParam(":semestre",$semestre,PDO::PARAM_STR);
 			$conn->bindParam(":credito",$credito,PDO::PARAM_INT);
