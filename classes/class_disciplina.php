@@ -218,7 +218,15 @@ class disciplina {
 				echo "<script> alert('ERRO CADASTRA DISCIPLINA');</script>";
 			}
 		}
-
+		function excluiDisciplinaById($pdo,$id){
+			$tb = $pdo->prepare("UPDATE itemdisciplina SET flgativo = 0 WHERE iditemdisciplina = :id");
+			$tb->bindParam(":id", $id, PDO::PARAM_INT);
+			if($tb->execute()){
+				echo "<script>window.location='visualizadisciplinas.php'</script>";
+			}else{
+				echo "<script> alert('ERRO, DISCIPLINA NAO EXCLUIDA')</script>";
+			}
+		}
 		function lista_itemdisciplina($pdo){
 			$conn = $pdo->prepare("SELECT * FROM itemdisciplina WHERE flgativo=1 ORDER BY nome ASC");
 			$conn->execute();

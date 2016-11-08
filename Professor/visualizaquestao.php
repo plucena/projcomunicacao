@@ -67,7 +67,7 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
   <h2><strong>Questão<strong></h2><!--chamar função php número da questão -->
-  <h3 style="text-align:justify;"><?php echo $key['titulo']; ?> </h3> <!--chamar função php Enunciado -->
+  <h3 style=" white-space: pre-wrap;  text-align:justify;"><?php echo $key[0]['titulo']; ?></h3> <!--chamar função php Enunciado -->
  </div>
   </div>
 
@@ -77,7 +77,7 @@
         <div class="col-md-5 col-md-offset-2">
             <?php
               if (!empty($key['imagem'])){
-            echo '<img class="responsiva" src="data:image/jpg;base64,'.$key['imagem'].'" />';
+            echo '<img class="responsiva" src="data:image/jpg;base64,'.$key[0]['imagem'].'" />';
             }else{
             echo "";
       }
@@ -95,31 +95,31 @@
   <div class="radio">
     <label for="radios-0">
       <input type="radio" name="radios" id="" value="" checked="checked">
-      <?php echo $key['resposta1'] ?>
+      <?php echo $key[0]['resposta1'] ?>
     </label>
   </div>
   <div class="radio">
     <label for="radios-1">
       <input type="radio" name="radios" id="" value="">
-     <?php echo $key['resposta2'] ?>
+     <?php echo $key[0]['resposta2'] ?>
     </label>
   </div>
   <div class="radio">
     <label for="radios-2">
       <input type="radio" name="radios" id="" value="">
-      <?php echo $key['resposta3'] ?>
+      <?php echo $key[0]['resposta3'] ?>
     </label>
   </div>
   <div class="radio">
     <label for="radios-3">
       <input type="radio" name="radios" id="" value="">
-      <?php echo $key['resposta4'] ?>
+      <?php echo $key[0]['resposta4'] ?>
     </label>
   </div>
   <div class="radio">
     <label for="radios-4">
       <input type="radio" name="radios" id="" value="">
-      <?php echo $key['resposta5'] ?>
+      <?php echo $key[0]['resposta5'] ?>
     </label>
   </div>
   </div>
