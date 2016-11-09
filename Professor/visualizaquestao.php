@@ -76,7 +76,7 @@
     <div class="row">
         <div class="col-md-5 col-md-offset-2">
             <?php
-              if (!empty($key['imagem'])){
+              if (!empty($key[0]['imagem'])){
             echo '<img class="responsiva" src="data:image/jpg;base64,'.$key[0]['imagem'].'" />';
             }else{
             echo "";

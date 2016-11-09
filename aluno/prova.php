@@ -27,7 +27,7 @@ if(!empty($_POST['check_list'])) {
       array_push($idquestoes, $key['id']);
     }
 
-    shuffle($retorno);
+    //shuffle($retorno);
 
     foreach ($retorno as $key) {
       if (!empty($key['imagem'])){
