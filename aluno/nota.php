@@ -1,26 +1,36 @@
 <?php
 if (!isset($_SESSION)) session_start();
 if (isset($_POST['finalizar'])) {
-  $idquestoes = unserialize($_COOKIE['idquestoes']);
-  $respquestoes = unserialize($_COOKIE['respquestoes']);
-  $disciplinas = unserialize($_COOKIE['check_list']);
-  $numQuestoes = count($respquestoes);
-  $respostaAluno = array();
-  $respIncorretas = 0;
+include '../model/conexao.php';
+require_once('../classes/class_prova.php');
 
-  for ($i=1; $i < $numQuestoes+1; $i++) {
-    array_push($respostaAluno, $_POST['respQuestao'.$i.'']);
-  }
+$respostas=($_SESSION['resps']);
+$disciplinas=($_SESSION['check_list']);
+$gabarito = array();
+$respostasaluno = array();
+$idquestoes = array();
+$qtdquestoes = 0;
+$incorretas = 0;
 
-  for ($i=0; $i < $numQuestoes; $i++) {
-    if ($respostaAluno[$i] !== $respquestoes[$i]) {
-      $respIncorretas++;
-    }
-  }
-  $nota = (($numQuestoes-$respIncorretas)/$numQuestoes)*10;
+//conta a quantidade de questões e de respostas incorretas
+foreach ($respostas as $key => $value) {
+	$respostaaluno = $_POST['questaoid'.$key];
+	if($respostaaluno !== $value){
+		$incorretas++;
+	} 
+	
+	$qtdquestoes++;
+	$respostasaluno[$key] = $respostaaluno;
+	array_push($gabarito,$value);
+	array_push($idquestoes,$key);
+
 }
 
+
+
+$nota = (($qtdquestoes-$incorretas)/$qtdquestoes)*10;
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,7 +69,7 @@ if (isset($_POST['finalizar'])) {
 <div id="wrap"> 
 <div class="text-center" style="margin-top:50px;">
 <div class="panel panel-default" style="margin-left: 30%; margin-right: 30%">
-  <h2>Você selecionou as seguintes alternativas:</h2> <h3><?php foreach ($respostaAluno as $key) {
+  <h2>Você selecionou as seguintes alternativas:</h2> <h3><?php foreach ($respostasaluno as $key) {
     echo $key." | ";
   } ?></h3>
   </div>
@@ -80,14 +90,14 @@ if (isset($_POST['finalizar'])) {
 	  </div>
 </body>
 </html>
+
 <?php
-require_once('../classes/class_prova.php');
-include ('../model/conexao.php');
-$x = new prova();
 $ra = $_SESSION['ra'];
 $nome = $_SESSION['nome'];
 $dtainicio = $_SESSION['dtainicio'];
+echo "Sua nota é: ".$nota;
+$x = new prova();
+$x->salvarProva($PDO, $ra, $nome, $nota, $dtainicio, $disciplinas, $idquestoes, $respostasaluno);
 
-$x->salvarProva($PDO, $ra, $nome, $nota, $dtainicio, $disciplinas, $idquestoes, $respostaAluno);
-
+}
 ?>
