@@ -45,7 +45,7 @@ $html = '
         <thead>
           <tr>
           <th class="desc" colspan="2">RA</th>
-          <th class="desc" colspan="2">Nome Aluno</th>
+          <th class="desc" colspan="2">Aluno</th>
           ';
   foreach ($disciplinas as $key) {
     $html .= '<th class="desc" colspan="2">'.$key['nome'].'</th>';
@@ -87,7 +87,7 @@ $html .= '<th class="desc" colspan="2">Nota PU</th>
                  $html .= '<td class="desc" colspan="2"></td>';
                  $contadorColunas++;
                }
-               $html .= '<td class="desc" colspan="2">'.$retorno[$i]['nota'].'</td>';
+               $html .= '<td class="desc nota" colspan="2">'.$retorno[$i]['nota'].'</td>';
                $contadorColunas = 0;
              }
 
