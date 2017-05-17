@@ -1,4 +1,4 @@
-<?php
+<?php 
 if (!isset($_SESSION)) session_start();
 if (isset($_POST['finalizar'])) {
 include '../model/conexao.php';
@@ -95,7 +95,6 @@ $nota = (($qtdquestoes-$incorretas)/$qtdquestoes)*10;
 $ra = $_SESSION['ra'];
 $nome = $_SESSION['nome'];
 $dtainicio = $_SESSION['dtainicio'];
-echo "Sua nota é: ".$nota;
 $x = new prova();
 $x->salvarProva($PDO, $ra, $nome, $nota, $dtainicio, $disciplinas, $idquestoes, $respostasaluno);
 
