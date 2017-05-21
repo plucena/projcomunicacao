@@ -11,7 +11,7 @@ $array_questoes = array();
 
 //verifica se aluno já fez a prova -----------------------------------------------------
   $ra = $_SESSION['ra'];
-  $verifica_prova = FALSE;
+    $verifica_prova = FALSE;
     $prova = new prova();
     $retornoverif = $prova->verificaProva($PDO,$ra);
     foreach ($retornoverif as $iddisc) {

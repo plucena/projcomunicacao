@@ -68,12 +68,6 @@ $nota = (($qtdquestoes-$incorretas)/$qtdquestoes)*10;
 </nav>
 <div id="wrap"> 
 <div class="text-center" style="margin-top:50px;">
-<div class="panel panel-default" style="margin-left: 30%; margin-right: 30%">
-  <h2>Você selecionou as seguintes alternativas:</h2> <h3><?php foreach ($respostasaluno as $key) {
-    echo $key." | ";
-  } ?></h3>
-  </div>
-  <br/>
   <div class="panel panel-default" style="margin-left: 40%; margin-right: 40%">
   <h2>Sua nota é:</h2><strong><h2 class="span6 text-danger offset3"> <?php echo round($nota, 1); ?></h2></strong>
   </div>
