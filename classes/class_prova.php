@@ -61,7 +61,7 @@ class prova {
 				AND d.curso = :curso
 				AND d.turno = :turno
 				AND d.semestre = :semestre 
-				AND pd.notadisciplina is not null
+				AND round(pd.notadisciplina,1) is not null
 				GROUP BY p.id
 				ORDER BY p.id ASC;"
         );
@@ -164,7 +164,7 @@ class prova {
 						$notadisc = (($totalquestoes-$incorretas)/$totalquestoes)*10;
 			$conn->bindParam(":lastId",$lastId, PDO::PARAM_INT);
 			$conn->bindParam(":iddisciplina", $key, PDO::PARAM_INT);
-			$conn->bindParam(":notadisciplina", $notadisc, PDO::PARAM_INT);
+			$conn->bindParam(":notadisciplina", $notadisc, PDO::PARAM_STR);
 
 			if($conn->execute()){
 				

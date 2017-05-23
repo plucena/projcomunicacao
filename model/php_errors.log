@@ -1,0 +1,4 @@
+[21-May-2017 19:06:28 UTC] PHP Warning:  error_log(): SMTP server response: 530 SMTP authentication is required. in C:\www\projcomunicacao\model\validacao.php on line 45
+[21-May-2017 19:06:37 UTC] PHP Warning:  error_log(): SMTP server response: 530 SMTP authentication is required. in C:\www\projcomunicacao\model\validacao.php on line 45
+[21-May-2017 19:06:48 UTC] PHP Warning:  error_log(): SMTP server response: 530 SMTP authentication is required. in C:\www\projcomunicacao\model\validacao.php on line 45
+[21-May-2017 19:06:59 UTC] PHP Warning:  error_log(): SMTP server response: 530 SMTP authentication is required. in C:\www\projcomunicacao\model\validacao.php on line 45

@@ -1,0 +1,8 @@
+[18-May-2017 21:38:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function int() in C:\www\projcomunicacao\aluno\prova.php:13
+Stack trace:
+#0 {main}
+  thrown in C:\www\projcomunicacao\aluno\prova.php on line 13
+[18-May-2017 21:39:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function int() in C:\www\projcomunicacao\aluno\prova.php:14
+Stack trace:
+#0 {main}
+  thrown in C:\www\projcomunicacao\aluno\prova.php on line 14
