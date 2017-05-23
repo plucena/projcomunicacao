@@ -32,9 +32,9 @@
 <div id="espaco"></div>
 
 <div class="col-md-3">
-<h4 class="text-left">Gabarito disponível a partir de:</h4>
-<h4 class="text-left">RTV: 26/05</h4>
-<h4 class="text-left">PP: 02/05</h4>
+<h4 class="text-left">Gabarito disponível:</h4>
+<h4 class="text-left">RTV: 26/05 a 28/05</h4>
+<h4 class="text-left">PP: 02/06 a 04/06</h4>
 </div>
 
 
@@ -68,7 +68,7 @@
      <div id="push"></div>
     <div id="footer">
     <div class="container">
-    <p class="muted credit"> Unasp - Centro Universitário Adventista de São Paulo - © 2016 - Todos os direitos reservados.</a></p>
+    <p class="muted credit"> Unasp - Centro Universitário Adventista de São Paulo - © 2016 - Todos os direitos reservados.</p>
     </div>
   </div>  
 </body>
