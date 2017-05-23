@@ -61,7 +61,7 @@ class prova {
 				AND d.curso = :curso
 				AND d.turno = :turno
 				AND d.semestre = :semestre 
-				AND round(pd.notadisciplina,1) is not null
+				AND round(pd.notadisciplina, 1) is not null
 				GROUP BY p.id
 				ORDER BY p.id ASC;"
         );

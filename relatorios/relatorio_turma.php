@@ -61,7 +61,7 @@ if (!empty($provas)){
                 }
             }
 
-            $html .= '<td class="desc nota" colspan="2">'.$notaImpressa.'</td>';
+            $html .= '<td class="desc nota" colspan="2">'.round($notaImpressa,1).'</td>';
 
         }
 
