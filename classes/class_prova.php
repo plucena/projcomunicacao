@@ -65,7 +65,7 @@ class prova {
 				GROUP BY p.id
 				ORDER BY p.id ASC;"
         );
-
+   
         $conn->bindParam(":curso",$curso,PDO::PARAM_STR);
         $conn->bindParam(":turno",$turno,PDO::PARAM_STR);
         $conn->bindParam(":semestre",$semestre,PDO::PARAM_INT);
