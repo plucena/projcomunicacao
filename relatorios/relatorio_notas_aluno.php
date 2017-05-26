@@ -71,11 +71,11 @@ if($dataatual >= $datainicial && $dataatual <= $datafinal){
   $file = "relatorio_notas.pdf";
   $pdf->SetHeader('Prova Unificada|Relatório de notas|{PAGENO}');
   $pdf->SetFooter('Turma de Sistemas para Internet@2016||{DATE j-m-Y}');
+  $html = mb_convert_encoding($html, 'UTF-8', 'UTF-8');
   $pdf->WriteHTML($html);
   $md = strcode2utf($file);
   $pdf->SetTitle($md);
   $pdf->Output($file, 'I');
-  $pdf->charset_in='windows-1252';
 
   $css = file_get_contents('../assets/reports/css/style.css');
   $pdf->WriteHTML($css,1);
