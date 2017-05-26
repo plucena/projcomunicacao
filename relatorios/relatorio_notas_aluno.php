@@ -13,7 +13,7 @@ $datafinal=  date('Y-m-d',strtotime('2017-05-29')); // RTV
 $datainicial= strtotime('2017-06-02'); // PP
 $datafinal= strtotime('2017-06-04');  // PP
 */
-if($dataatual >= $datainicial && $dataatual =< $datafinal){
+if($dataatual >= $datainicial && $dataatual <= $datafinal){
 
   require_once ("../assets/mPDF/vendor/autoload.php");
   require_once("../classes/class_prova.php");
