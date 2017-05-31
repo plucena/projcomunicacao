@@ -13,7 +13,8 @@ $dataatual = date('Y-m-d');
 $datainicial= strtotime('2017-06-02'); // PP
 $datafinal= strtotime('2017-06-04');  // PP
 
-if($dataatual > $datainicial && $dataatual < $datafinal){
+
+if($dataatual >= $datainicial && $dataatual <= $datafinal){
 
   require_once ("../assets/mPDF/vendor/autoload.php");
   require_once("../classes/class_prova.php");
@@ -71,6 +72,7 @@ if($dataatual > $datainicial && $dataatual < $datafinal){
   $file = "relatorio_notas.pdf";
   $pdf->SetHeader('Prova Unificada|Relatório de notas|{PAGENO}');
   $pdf->SetFooter('Turma de Sistemas para Internet@2016||{DATE j-m-Y}');
+  $html = mb_convert_encoding($html, 'UTF-8', 'UTF-8');
   $pdf->WriteHTML($html);
   $md = strcode2utf($file);
   $pdf->SetTitle($md);
