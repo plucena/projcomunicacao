@@ -56,7 +56,7 @@ include("verifica_sessao_admin.php");
 <div id="wrap">
        <legend class="text-center">SELECIONE A TURMA QUE DESEJA VER O RELATÓRIO</legend>
        
-       <form class="form-horizontal" id="questcad" action="../relatorios/relatorio_turma.php" method="post">
+       <form class="form-horizontal" id="questcad" action="../relatorios/relatorio_turma_admin.php" method="post">
 
         <fieldset>
 
