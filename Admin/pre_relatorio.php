@@ -56,7 +56,7 @@ include("verifica_sessao_admin.php");
 <div id="wrap">
        <legend class="text-center">SELECIONE A TURMA QUE DESEJA VER O RELATÓRIO</legend>
        
-       <form class="form-horizontal" id="questcad" action="../relatorios/relatorio_turma_admin.php" method="post">
+       <form class="form-horizontal" id="questcad" action="../relatorios/relatorio_turma.php" method="post">
 
         <fieldset>
 
@@ -113,7 +113,7 @@ include("verifica_sessao_admin.php");
 
 	<legend class="text-center">INSIRA O RA DO ALUNO QUE DESEJA PESQUISAR</legend>
 
-	<form class="form-horizontal" id="questcad" action="../relatorios/relatorio_notas_aluno.php" method="POST">
+	<form class="form-horizontal" id="questcad" action="../relatorios/relatorio_notas_aluno_admin.php" method="POST">
 		 <fieldset>
 			<div class="form-group">
 	  		<label class="col-md-4 control-label" for="curso">RA: </label>
